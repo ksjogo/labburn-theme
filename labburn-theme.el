@@ -1,6 +1,6 @@
 ;;; labburn-theme.el --- A lab color space zenburn theme.
 
-;; Original Author Bozhidar Batsov
+;; Original Author: Bozhidar Batsov
 ;; Original URL: https://github.com/bbatsov/zenburn-emacs
 ;; Author: Johannes Goslar
 ;; Created: 5 April 2016
@@ -799,9 +799,11 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
                                           :underline t :overline t))))
  )
 
+;;;###autoload
 (and load-file-name
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
                   (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'labburn)
+;;; labburn-theme.el ends here
