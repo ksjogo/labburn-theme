@@ -1,3 +1,7 @@
+[![MELPA](http://melpa.org/packages/labburn-theme-badge.svg)](http://melpa.org/#/labburn-theme)
+
+![http://labburn.goslars.net/labburn.png](http://labburn.goslars.net/labburn.png)
+
 Labburn is a port of the [Zenburn for Emacs theme](https://github.com/bbatsov/zenburn-emacs), which in turn is
 is a direct port of the popular [Zenburn](http://kippura.org/zenburnpage/) theme for vim,
 developed by [Jani Nurminen](https://github.com/jnurmine).
