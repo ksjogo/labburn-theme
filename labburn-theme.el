@@ -88,13 +88,13 @@ conversion.  If omitted or nil, use `labburn-d65-xyz'."
         (b (+ (* 0.0556434 X) (* -0.2040259 Y) (* 1.0572252 Z))))
     (list (if (<= r 0.0031308)
               (* 12.92 r)
-            (- (* 1.055 (expt r (/ 2.4))) 0.055))
+            (- (* 1.055 (expt r (/ 1 2.4))) 0.055))
           (if (<= g 0.0031308)
               (* 12.92 g)
-            (- (* 1.055 (expt g (/ 2.4))) 0.055))
+            (- (* 1.055 (expt g (/ 1 2.4))) 0.055))
           (if (<= b 0.0031308)
               (* 12.92 b)
-            (- (* 1.055 (expt b (/ 2.4))) 0.055)))))
+            (- (* 1.055 (expt b (/ 1 2.4))) 0.055)))))
 
 (defun labburn-rgb-to-hex  (red green blue)
   "Return hexadecimal notation for the color RED GREEN BLUE.
