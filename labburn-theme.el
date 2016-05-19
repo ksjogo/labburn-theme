@@ -419,6 +419,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
    ((((supports :underline (:style wave)))
      (:underline (:style wave :color ,labburn-red) :inherit unspecified))
     (t (:foreground ,labburn-red-1 :underline t))))
+;;;;geben
+ `(geben-backtrace-fileuri ((t (:foreground ,labburn-green+1))))
 ;;;;; git-commit
  `(git-commit-comment-action ((,labburn-class (:foreground ,labburn-green+1))))
  `(git-commit-comment-branch ((,labburn-class (:foreground ,labburn-blue+1))))
