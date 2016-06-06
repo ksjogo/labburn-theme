@@ -610,6 +610,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(message-header-xheader ((t (:foreground ,labburn-green))))
  `(message-mml ((t (:foreground ,labburn-yellow))))
  `(message-separator ((t (:inherit font-lock-comment-face))))
+ ;;;;; mini-header-line
+ `(mini-header-line-active ((t (:background ,labburn-bg-2))))
 ;;;;; mu4e
  `(mu4e-header-key-face ((t (:inherit custom-link :underline nil))))
 ;;;;; org-mode
