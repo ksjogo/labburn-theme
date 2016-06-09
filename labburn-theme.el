@@ -220,6 +220,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
    ((t (:inverse-video nil))))
  `(ace-jump-face-foreground
    ((t (:foreground "yellow"))))
+;;;;; ace-window
+ `(aw-background-face
+   ((t (:foreground ,labburn-fg-1 :background ,labburn-bg :inverse-video nil))))
+ `(aw-leading-char-face ((t (:inherit aw-mode-line-face))))
 ;;;;; avy
  `(avy-background-face
    ((t (:foreground ,labburn-fg-3 :background ,labburn-bg :inverse-video nil))))
@@ -233,6 +237,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
    ((t (:foreground "yellow" :background ,labburn-bg :inverse-video nil))))
 ;;;;; anzu
  `(anzu-mode-line ((t (:foreground ,labburn-cyan))))
+ `(anzu-match-1 ((t (:foreground ,labburn-bg :background ,labburn-green))))
+ `(anzu-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
+ `(anzu-match-3 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
+ `(anzu-replace-to ((t (:inherit anzu-replace-highlight :foreground ,labburn-yellow))))
 ;;;;; auctex
  `(font-latex-bold-face ((t (:inherit bold))))
  `(font-latex-warning-face ((t (:foreground nil :inherit font-lock-warning-face))))
@@ -257,6 +265,14 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(bm-persistent-face ((t (:background ,labburn-green-1 :foreground ,labburn-bg))))
 ;;;;; cider
  `(cider-result-overlay-face ((t (:foreground ,labburn-fg-1 :background unspecified))))
+ `(cider-enlightened-face ((t (:box (:color ,labburn-orange :line-width -1)))))
+ `(cider-enlightened-local-face ((t (:weight bold :foreground ,labburn-green+1))))
+ `(cider-deprecated-face ((t (:background ,labburn-yellow-2))))
+ `(cider-instrumented-face ((t (:box (:color ,labburn-red :line-width -1)))))
+ `(cider-traced-face ((t (:box (:color ,labburn-cyan :line-width -1)))))
+ `(cider-test-failure-face ((t (:background ,labburn-red-4))))
+ `(cider-test-error-face ((t (:background ,labburn-magenta))))
+ `(cider-test-success-face ((t (:background ,labburn-green-1))))
 ;;;;; company-mode
  `(company-tooltip ((t (:foreground ,labburn-fg :background ,labburn-bg+1 :weight normal))))
  `(company-tooltip-selection ((t (:background ,labburn-bg+2 :weight normal))))
@@ -331,6 +347,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(diredp-write-priv ((t (:foreground ,labburn-magenta))))
  ;; `(dired-directory ((t (:foreground "#7f9f7f"))))
  ;; `(dired-perm-write ((t (:inherit default))))
+;;;;; dired-async
+ `(dired-async-failures ((t (:foreground ,labburn-red))))
+ `(dired-async-message ((t (:foreground ,labburn-yellow))))
+ `(dired-async-mode-message ((t (:foreground ,labburn-yellow))))
 ;;;;; edebug
  `(hi-edebug-x-debug-line ((t (:foreground "yellow"))))
  `(hi-edebug-x-stop ((t (:background ,labburn-blue-5))))
@@ -352,6 +372,9 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(ediff-odd-diff-B ((t (:background ,labburn-bg+2))))
  `(ediff-odd-diff-C ((t (:background ,labburn-bg+2))))
 ;;;;; elfeed
+ `(elfeed-log-error-level-face ((t (:foreground ,labburn-red))))
+ `(elfeed-log-info-level-face ((t (:foreground ,labburn-blue))))
+ `(elfeed-log-warn-level-face ((t (:foreground ,labburn-yellow))))
  `(elfeed-search-date-face ((t (:foreground ,labburn-yellow-1 :underline t))))
  `(elfeed-search-tag-face ((t (:foreground ,labburn-green))))
  `(elfeed-search-feed-face ((t (:foreground ,labburn-cyan))))
@@ -502,7 +525,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(js2-external-variable ((t (:underline (:style wave :color ,labburn-orange)))))
  `(js2-jsdoc-html-tag-delimiter ((t (:inherit web-mode-html-tag-face))))
  `(js2-jsdoc-html-tag-name ((t (:inherit web-mode-html-tag-face))))
- ;;;;; additional js2 mode attributes for better syntax highlighting
+;;;;; additional js2 mode attributes for better syntax highlighting
  `(js2-instance-member ((t (:foreground ,labburn-green-1))))
  `(js2-jsdoc-html-tag-delimiter ((t (:foreground ,labburn-orange))))
  `(js2-jsdoc-html-tag-name ((t (:foreground ,labburn-red-1))))
@@ -515,6 +538,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
 ;;;;; linum-mode
  `(linum ((t (:foreground ,labburn-bg+3 :background ,labburn-bg :height 0.6))))
  `(linum-relative-current-face ((t (:inherit linum))))
+;;;;; lispy
+ `(lispy-command-name-face ((t (:background ,labburn-bg-05 :inherit font-lock-function-name-face))))
+ `(lispy-cursor-face ((t (:foreground ,labburn-bg :background ,labburn-fg))))
+ `(lispy-face-hint ((t (:inherit highlight :foreground ,labburn-yellow))))
 ;;;;; ruler-mode
  `(ruler-mode-column-number ((t (:inherit 'ruler-mode-default :foreground ,labburn-fg))))
  `(ruler-mode-fill-column ((t (:inherit 'ruler-mode-default :foreground ,labburn-yellow))))
@@ -610,7 +637,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(message-header-xheader ((t (:foreground ,labburn-green))))
  `(message-mml ((t (:foreground ,labburn-yellow))))
  `(message-separator ((t (:inherit font-lock-comment-face))))
- ;;;;; mini-header-line
+;;;;; mini-header-line
  `(mini-header-line-active ((t (:background ,labburn-bg-2))))
 ;;;;; mu4e
  `(mu4e-header-key-face ((t (:inherit custom-link :underline nil))))
