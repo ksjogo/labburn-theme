@@ -203,7 +203,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(font-lock-comment-delimiter-face ((t (:foreground ,labburn-green-1))))
  `(font-lock-constant-face ((t (:foreground ,labburn-green+4))))
  `(font-lock-doc-face ((t (:foreground ,labburn-green+2))))
- `(font-lock-function-name-face ((t (:foreground ,labburn-orange))))
+ `(font-lock-function-name-face ((t (:foreground ,labburn-cyan))))
  `(font-lock-keyword-face ((t (:foreground ,labburn-yellow))))
  `(font-lock-negation-char-face ((t (:foreground ,labburn-yellow))))
  `(font-lock-preprocessor-face ((t (:foreground ,labburn-blue+1))))
