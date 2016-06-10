@@ -129,6 +129,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
 (labburn-define-color "labburn-bg" 0 0 27 5)
 (labburn-define-color "labburn-fg" -2.7768240550932743 7.856188033624156 87)
 
+(defvar labburn-highlight "yellow")
+
 ;;; Theme Faces
 (custom-theme-set-faces
  'labburn
@@ -180,7 +182,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(grep-match-face ((t (:foreground ,labburn-orange))))
  `(match ((t (:background ,labburn-bg-1 :foreground ,labburn-orange))))
 ;;;;; isearch
- `(isearch ((t (:foreground "yellow"))))
+ `(isearch ((t (:foreground ,labburn-highlight))))
  `(isearch-fail ((t (:foreground ,labburn-fg :background ,labburn-red-4))))
  `(lazy-highlight ((t (:foreground ,labburn-yellow-2 :background ,labburn-bg-05))))
 
@@ -219,7 +221,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(ace-jump-face-background
    ((t (:inverse-video nil))))
  `(ace-jump-face-foreground
-   ((t (:foreground "yellow"))))
+   ((t (:foreground ,labburn-highlight))))
 ;;;;; ace-window
  `(aw-background-face
    ((t (:foreground ,labburn-fg-1 :background ,labburn-bg :inverse-video nil))))
@@ -228,13 +230,13 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(avy-background-face
    ((t (:foreground ,labburn-fg-3 :background ,labburn-bg :inverse-video nil))))
  `(avy-lead-face-0
-   ((t (:foreground "yellow" :background ,labburn-bg :inverse-video nil))))
+   ((t (:foreground ,labburn-highlight :background ,labburn-bg :inverse-video nil))))
  `(avy-lead-face-1
-   ((t (:foreground "yellow" :background ,labburn-bg :inverse-video nil))))
+   ((t (:foreground ,labburn-highlight :background ,labburn-bg :inverse-video nil))))
  `(avy-lead-face-2
-   ((t (:foreground "yellow" :background ,labburn-bg :inverse-video nil))))
+   ((t (:foreground ,labburn-highlight :background ,labburn-bg :inverse-video nil))))
  `(avy-lead-face
-   ((t (:foreground "yellow" :background ,labburn-bg :inverse-video nil))))
+   ((t (:foreground ,labburn-highlight :background ,labburn-bg :inverse-video nil))))
 ;;;;; anzu
  `(anzu-mode-line ((t (:foreground ,labburn-cyan))))
  `(anzu-match-1 ((t (:foreground ,labburn-bg :background ,labburn-green))))
@@ -320,6 +322,11 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(diff-hl-change ((,labburn-class (:foreground ,labburn-blue :background ,labburn-blue-2))))
  `(diff-hl-delete ((,labburn-class (:foreground ,labburn-red+1 :background ,labburn-red-1))))
  `(diff-hl-insert ((,labburn-class (:foreground ,labburn-green+1 :background ,labburn-green-1))))
+;;;;; dired
+ `(dired-directory ((t (:foreground ,labburn-orange))))
+ `(dired-marked ((t (:foreground ,labburn-highlight))))
+ `(dired-mark ((t (:foreground ,labburn-highlight))))
+ `(dired-perm-write ((t (:foreground ,labburn-red+2))))
 ;;;;; dired+
  `(diredp-display-msg ((t (:foreground ,labburn-blue))))
  `(diredp-compressed-file-suffix ((t (:foreground ,labburn-orange))))
@@ -352,7 +359,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(dired-async-message ((t (:foreground ,labburn-yellow))))
  `(dired-async-mode-message ((t (:foreground ,labburn-yellow))))
 ;;;;; edebug
- `(hi-edebug-x-debug-line ((t (:foreground "yellow"))))
+ `(hi-edebug-x-debug-line ((t (:foreground ,labburn-highlight))))
  `(hi-edebug-x-stop ((t (:background ,labburn-blue-5))))
 ;;;;; ediff
  `(ediff-current-diff-A ((t (:foreground ,labburn-fg :background ,labburn-red-4))))
@@ -413,7 +420,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(eshell-ls-special ((t (:foreground ,labburn-yellow))))
  `(eshell-ls-symlink ((t (:foreground ,labburn-cyan))))
 ;;;;; eval-sexp-fu-flash
- `(eval-sexp-fu-flash ((t (:foreground "yellow"))))
+ `(eval-sexp-fu-flash ((t (:foreground ,labburn-highlight))))
  `(eval-sexp-fu-flash-error ((t (:foreground "red"))))
 ;;;;; flx
  `(flx-highlight-face ((t (:foreground ,labburn-green+2))))
@@ -496,7 +503,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(helm-source-header ((t (:foreground ,labburn-yellow :background ,labburn-bg-2 :underline nil))))
  `(helm-swoop-target-line-block-face ((t (:background ,labburn-bg+1))))
  `(helm-swoop-target-line-face ((t (:background ,labburn-bg+1))))
- `(helm-swoop-target-word-face ((t (:foreground "yellow"))))
+ `(helm-swoop-target-word-face ((t (:foreground ,labburn-highlight))))
 ;;;;; hydra
  `(hydra-face-red ((t (:foreground ,labburn-red-1 :background ,labburn-bg))))
  `(hydra-face-amaranth ((t (:foreground ,labburn-red-3 :background ,labburn-bg))))
@@ -727,7 +734,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(sh-quoted-exec ((t (:foreground ,labburn-red))))
 ;;;;; show-paren
  `(show-paren-mismatch ((t (:foreground "red"))))
- `(show-paren-match ((t (:foreground "yellow"))))
+ `(show-paren-match ((t (:foreground ,labburn-highlight))))
 ;;;;; smartparens
  `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red+1 :background ,labburn-bg))))
  `(sp-show-pair-match-face ((t ())))
