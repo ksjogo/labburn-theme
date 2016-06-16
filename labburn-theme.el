@@ -779,6 +779,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  '(term-default-bg-color ((t (:inherit term-color-black))))
 ;;;;; ts
  `(ts-block-face ((t (:inherit font-lock-keyword-face))) t)
+ `(ts-html-face ((t (:foreground ,labburn-red))))
 ;;;;; undo-tree
  `(undo-tree-visualizer-active-branch-face ((t (:foreground ,labburn-fg+1))))
  `(undo-tree-visualizer-current-face ((t (:foreground ,labburn-red-1))))
