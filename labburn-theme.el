@@ -347,7 +347,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(diredp-mode-line-flagged ((t (:foreground ,labburn-yellow))))
  `(diredp-mode-line-marked ((t (:foreground ,labburn-orange))))
  `(diredp-no-priv ((t (:foreground ,labburn-fg-2))))
- `(diredp-number ((t (:foreground ,labburn-green+1))))
+ `(diredp-number ((t (:foreground ,labburn-green-2))))
  `(diredp-other-priv ((t (:foreground ,labburn-yellow-2))))
  `(diredp-rare-priv ((t (:foreground ,labburn-red-2))))
  `(diredp-read-priv ((t (:foreground ,labburn-green-2))))
