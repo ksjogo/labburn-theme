@@ -513,7 +513,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(hydra-face-teal ((t (:foreground ,labburn-cyan :background ,labburn-bg))))
 ;;;;; iedit-mode
  `(iedit-occurrence ((t (:background ,labburn-bg+2))))
-;;;; ivy
+;;;;; ivy
  `(ivy-confirm-face ((t (:foreground ,labburn-green :background ,labburn-bg))))
  `(ivy-match-required-face ((t (:foreground ,labburn-red :background ,labburn-bg))))
  `(ivy-remote ((t (:foreground ,labburn-blue :background ,labburn-bg))))
@@ -707,6 +707,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(outline-6 ((t (:foreground ,labburn-green+2))))
  `(outline-7 ((t (:foreground ,labburn-red-4))))
  `(outline-8 ((t (:foreground ,labburn-blue-4))))
+ ;;;;; pdf-tools
+ `(pdf-view-midnight-colors '(,labburn-fg . ,labburn-bg-05))
 ;;;;; rainbow-delimiters
  `(rainbow-delimiters-depth-1-face ((t (:foreground ,labburn-fg))))
  `(rainbow-delimiters-depth-2-face ((t (:foreground ,labburn-green+4))))
