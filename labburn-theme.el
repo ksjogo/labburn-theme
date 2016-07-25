@@ -765,6 +765,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
     (t
      (:underline ,labburn-green))))
  `(slime-highlight-face ((t (:inherit highlight))))
+;;;;; smartparens
+ `(sp-show-pair-enclosing-face ((t (:foreground ,labburn-highlight))))
+ `(sp-show-pair-match-face ((t (:foreground ,labburn-highlight))))
+ `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red))))
 ;;;;; term
  `(swiper-line-face ((t (nil))))
 ;;;;; term
