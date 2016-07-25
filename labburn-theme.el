@@ -736,11 +736,12 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(sh-heredoc     ((t (:foreground ,labburn-yellow :bold t))))
  `(sh-quoted-exec ((t (:foreground ,labburn-red))))
 ;;;;; show-paren
- `(show-paren-mismatch ((t (:foreground "red"))))
+ `(show-paren-mismatch ((t (:foreground ,labburn-red))))
  `(show-paren-match ((t (:foreground ,labburn-highlight))))
-;;;;; smartparens
- `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red+1 :background ,labburn-bg))))
- `(sp-show-pair-match-face ((t ())))
+ ;;;;; smartparens
+ `(sp-show-pair-enclosing-face ((t (:foreground ,labburn-highlight))))
+ `(sp-show-pair-match-face ((t (:foreground ,labburn-highlight))))
+ `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red))))
 ;;;;; sml-mode-line
  '(sml-modeline-end-face ((t :inherit default :width condensed)))
 ;;;;; SLIME
@@ -767,10 +768,6 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
     (t
      (:underline ,labburn-green))))
  `(slime-highlight-face ((t (:inherit highlight))))
-;;;;; smartparens
- `(sp-show-pair-enclosing-face ((t (:foreground ,labburn-highlight))))
- `(sp-show-pair-match-face ((t (:foreground ,labburn-highlight))))
- `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red))))
 ;;;;; term
  `(swiper-line-face ((t (nil))))
 ;;;;; term
