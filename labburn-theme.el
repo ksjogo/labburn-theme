@@ -242,7 +242,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(anzu-match-1 ((t (:foreground ,labburn-bg :background ,labburn-green))))
  `(anzu-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
  `(anzu-match-3 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
- `(anzu-replace-to ((t (:inherit anzu-replace-highlight :foreground ,labburn-yellow))))
+ `(anzu-replace-to ((t (:foreground ,labburn-highlight :background ,labburn-bg-4))))
+ `(anzu-replace-highlight ((t (:foreground ,labburn-highlight))))
 ;;;;; auctex
  `(font-latex-bold-face ((t (:inherit bold))))
  `(font-latex-warning-face ((t (:foreground nil :inherit font-lock-warning-face))))
