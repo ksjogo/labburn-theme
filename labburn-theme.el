@@ -267,7 +267,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(bm-fringe-persistent-face ((t (:background ,labburn-green-1 :foreground ,labburn-bg))))
  `(bm-persistent-face ((t (:background ,labburn-green-1 :foreground ,labburn-bg))))
 ;;;;; cider
- `(cider-result-overlay-face ((t (:foreground ,labburn-fg-1 :background unspecified))))
+ `(cider-result-overlay-face ((t (:background unspecified))))
  `(cider-enlightened-face ((t (:box (:color ,labburn-orange :line-width -1)))))
  `(cider-enlightened-local-face ((t (:weight bold :foreground ,labburn-green+1))))
  `(cider-deprecated-face ((t (:background ,labburn-yellow-2))))
