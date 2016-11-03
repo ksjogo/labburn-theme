@@ -650,6 +650,23 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(mini-header-line-active ((t (:background ,labburn-bg-2))))
 ;;;;; mu4e
  `(mu4e-header-key-face ((t (:inherit custom-link :underline nil))))
+ ;;;;; neotree
+ `(neo-banner-face ((t (:foreground ,labburn-blue+1 :weight bold))))
+ `(neo-header-face ((t (:foreground ,labburn-fg))))
+ `(neo-root-dir-face ((t (:foreground ,labburn-blue+1 :weight bold))))
+ `(neo-dir-link-face ((t (:foreground ,labburn-blue))))
+ `(neo-file-link-face ((t (:foreground ,labburn-fg))))
+ `(neo-expand-btn-face ((t (:foreground ,labburn-blue))))
+ `(neo-vc-default-face ((t (:foreground ,labburn-fg+1))))
+ `(neo-vc-user-face ((t (:foreground ,labburn-red :slant italic))))
+ `(neo-vc-up-to-date-face ((t (:foreground ,labburn-fg))))
+ `(neo-vc-edited-face ((t (:foreground ,labburn-magenta))))
+ `(neo-vc-needs-merge-face ((t (:foreground ,labburn-red+1))))
+ `(neo-vc-unlocked-changes-face ((t (:foreground ,labburn-red :background ,labburn-blue-5))))
+ `(neo-vc-added-face ((t (:foreground ,labburn-green+1))))
+ `(neo-vc-conflict-face ((t (:foreground ,labburn-red+1))))
+ `(neo-vc-missing-face ((t (:foreground ,labburn-red+1))))
+ `(neo-vc-ignored-face ((t (:foreground ,labburn-fg-1))))
 ;;;;; org-mode
  `(org-agenda-date-today
    ((t (:foreground ,labburn-fg+1 :slant italic))) t)
@@ -708,7 +725,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(outline-6 ((t (:foreground ,labburn-green+2))))
  `(outline-7 ((t (:foreground ,labburn-red-4))))
  `(outline-8 ((t (:foreground ,labburn-blue-4))))
- ;;;;; pdf-tools
+;;;;; pdf-tools
  `(pdf-view-midnight-colors '(,labburn-fg . ,labburn-bg-05))
 ;;;;; rainbow-delimiters
  `(rainbow-delimiters-depth-1-face ((t (:foreground ,labburn-fg))))
@@ -739,7 +756,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
 ;;;;; show-paren
  `(show-paren-mismatch ((t (:foreground ,labburn-red))))
  `(show-paren-match ((t (:foreground ,labburn-highlight))))
- ;;;;; smartparens
+;;;;; smartparens
  `(sp-show-pair-enclosing-face ((t (:foreground ,labburn-highlight))))
  `(sp-show-pair-match-face ((t (:foreground ,labburn-highlight))))
  `(sp-show-pair-mismatch-face ((t (:foreground ,labburn-red))))
