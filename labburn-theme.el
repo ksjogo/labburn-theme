@@ -181,6 +181,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(grep-hit-face ((t (:foreground ,labburn-blue))))
  `(grep-match-face ((t (:foreground ,labburn-orange))))
  `(match ((t (:background ,labburn-bg-1 :foreground ,labburn-orange))))
+;;;;; info
+ `(Info-quoted ((t (:inherit font-lock-constant-face))))
 ;;;;; isearch
  `(isearch ((t (:foreground ,labburn-highlight))))
  `(isearch-fail ((t (:foreground ,labburn-fg :background ,labburn-red-4))))
