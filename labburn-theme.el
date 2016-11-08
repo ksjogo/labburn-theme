@@ -457,7 +457,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(geben-backtrace-fileuri ((t (:foreground ,labburn-green+1))))
 ;;;;; git-commit
  `(git-commit-comment-action ((,labburn-class (:foreground ,labburn-green+1))))
- `(git-commit-comment-branch ((,labburn-class (:foreground ,labburn-blue+1))))
+ `(git-commit-comment-action ((,labburn-class (:foreground ,labburn-green+1))))
+ `(git-commit-summary ((,labburn-class (:foreground ,labburn-orange))))
  `(git-commit-comment-heading ((,labburn-class (:foreground ,labburn-yellow))))
 ;;;;; git-rebase
  `(git-rebase-hash ((t (:foreground ,labburn-orange))))
@@ -651,7 +652,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
 ;;;;; mini-header-line
  `(mini-header-line-active ((t (:background ,labburn-bg-2))))
 ;;;;; mu4e
- `(mu4e-header-key-face ((t (:inherit custom-link :underline nil))))
+ `(mu4e-header-key-face ((t (:foreground ,labburn-yellow))))
+ `(mu4e-header-value-face ((t (:foreground ,labburn-orange))))
  ;;;;; neotree
  `(neo-banner-face ((t (:foreground ,labburn-blue+1 :weight bold))))
  `(neo-header-face ((t (:foreground ,labburn-fg))))
