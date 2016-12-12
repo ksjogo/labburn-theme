@@ -253,6 +253,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
    ((t (:foreground ,labburn-highlight :background ,labburn-bg :inverse-video nil))))
 ;;;;; anzu
  `(anzu-mode-line ((t (:foreground ,labburn-cyan))))
+ `(anzu-mode-line-no-match ((t (:foreground ,labburn-red))))
  `(anzu-match-1 ((t (:foreground ,labburn-bg :background ,labburn-green))))
  `(anzu-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
  `(anzu-match-3 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
