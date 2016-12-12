@@ -32,104 +32,106 @@
 
 ;;;; Code:
 
-(deftheme labburn "The labburn color theme")
+;; get rid of these warnings
+(eval-and-compile
+  (deftheme labburn "The labburn color theme")
 
-;; labburn
+  ;; labburn
 
-(defconst labburn-base-lightness 80)
-(defconst labburn-base-lightness-step 5)
-(defconst labburn-base-saturation 25)
-(defconst labburn-class '((class color) (min-colors 89)))
+  (defconst labburn-base-lightness 80)
+  (defconst labburn-base-lightness-step 5)
+  (defconst labburn-base-saturation 25)
+  (defconst labburn-class '((class color) (min-colors 89)))
 
-(custom-theme-set-variables
- 'labburn
- `(rainbow-identifiers-cie-l*a*b*-lightness ,labburn-base-lightness t)
- `(rainbow-identifiers-cie-l*a*b*-saturation ,labburn-base-saturation t)
- `(rainbow-identifiers-choose-face-function 'rainbow-identifiers-cie-l*a*b*-choose-face t)
- `(rainbow-identifiers-cie-l*a*b*-color-count 1024 t))
+  (custom-theme-set-variables
+   'labburn
+   `(rainbow-identifiers-cie-l*a*b*-lightness ,labburn-base-lightness t)
+   `(rainbow-identifiers-cie-l*a*b*-saturation ,labburn-base-saturation t)
+   `(rainbow-identifiers-choose-face-function 'rainbow-identifiers-cie-l*a*b*-choose-face t)
+   `(rainbow-identifiers-cie-l*a*b*-color-count 1024 t))
 
-;; we won't have the colors/rainbow-identifiers packaged loaded on startup when the theme is used
-;; thus these functions were inlined here, if you know a better way, I am happy to adapt it
+  ;; we won't have the colors/rainbow-identifiers packaged loaded on startup when the theme is used
+  ;; thus these functions were inlined here, if you know a better way, I am happy to adapt it
 
-(defun labburn-clamp (num low high)
-  (min (max num low) high))
+  (defun labburn-clamp (num low high)
+    (min (max num low) high))
 
-(defconst labburn-d65-xyz '(0.950455 1.0 1.088753)
-  "D65 white point in CIE XYZ.")
+  (defconst labburn-d65-xyz '(0.950455 1.0 1.088753)
+    "D65 white point in CIE XYZ.")
 
-(defconst labburn-cie-ε (/ 216 24389.0))
-(defconst labburn-cie-κ (/ 24389 27.0))
+  (defconst labburn-cie-ε (/ 216 24389.0))
+  (defconst labburn-cie-κ (/ 24389 27.0))
 
-(defun labburn-lab-to-xyz (L a b &optional white-point)
-  "Convert CIE L*a*b* to CIE XYZ.
+  (defun labburn-lab-to-xyz (L a b &optional white-point)
+    "Convert CIE L*a*b* to CIE XYZ.
 WHITE-POINT specifies the (X Y Z) white point for the
 conversion.  If omitted or nil, use `labburn-d65-xyz'."
-  (pcase-let* ((`(,Xr ,Yr ,Zr) (or white-point labburn-d65-xyz))
-               (fy (/ (+ L 16) 116.0))
-               (fz (- fy (/ b 200.0)))
-               (fx (+ (/ a 500.0) fy))
-               (xr (if (> (expt fx 3.0) labburn-cie-ε)
-                       (expt fx 3.0)
-                     (/ (- (* fx 116) 16) labburn-cie-κ)))
-               (yr (if (> L (* labburn-cie-κ labburn-cie-ε))
-                       (expt (/ (+ L 16) 116.0) 3.0)
-                     (/ L labburn-cie-κ)))
-               (zr (if (> (expt fz 3) labburn-cie-ε)
-                       (expt fz 3.0)
-                     (/ (- (* 116 fz) 16) labburn-cie-κ))))
-    (list (* xr Xr)                 ; X
-          (* yr Yr)                 ; Y
-          (* zr Zr))))                ; Z
+    (pcase-let* ((`(,Xr ,Yr ,Zr) (or white-point labburn-d65-xyz))
+                 (fy (/ (+ L 16) 116.0))
+                 (fz (- fy (/ b 200.0)))
+                 (fx (+ (/ a 500.0) fy))
+                 (xr (if (> (expt fx 3.0) labburn-cie-ε)
+                         (expt fx 3.0)
+                       (/ (- (* fx 116) 16) labburn-cie-κ)))
+                 (yr (if (> L (* labburn-cie-κ labburn-cie-ε))
+                         (expt (/ (+ L 16) 116.0) 3.0)
+                       (/ L labburn-cie-κ)))
+                 (zr (if (> (expt fz 3) labburn-cie-ε)
+                         (expt fz 3.0)
+                       (/ (- (* 116 fz) 16) labburn-cie-κ))))
+      (list (* xr Xr)                   ; X
+            (* yr Yr)                   ; Y
+            (* zr Zr))))                ; Z
 
-(defun labburn-xyz-to-srgb (X Y Z)
-  "Convert CIE X Y Z colors to sRGB color space."
-  (let ((r (+ (* 3.2404542 X) (* -1.5371385 Y) (* -0.4985314 Z)))
-        (g (+ (* -0.9692660 X) (* 1.8760108 Y) (* 0.0415560 Z)))
-        (b (+ (* 0.0556434 X) (* -0.2040259 Y) (* 1.0572252 Z))))
-    (list (if (<= r 0.0031308)
-              (* 12.92 r)
-            (- (* 1.055 (expt r (/ 1 2.4))) 0.055))
-          (if (<= g 0.0031308)
-              (* 12.92 g)
-            (- (* 1.055 (expt g (/ 1 2.4))) 0.055))
-          (if (<= b 0.0031308)
-              (* 12.92 b)
-            (- (* 1.055 (expt b (/ 1 2.4))) 0.055)))))
+  (defun labburn-xyz-to-srgb (X Y Z)
+    "Convert CIE X Y Z colors to sRGB color space."
+    (let ((r (+ (* 3.2404542 X) (* -1.5371385 Y) (* -0.4985314 Z)))
+          (g (+ (* -0.9692660 X) (* 1.8760108 Y) (* 0.0415560 Z)))
+          (b (+ (* 0.0556434 X) (* -0.2040259 Y) (* 1.0572252 Z))))
+      (list (if (<= r 0.0031308)
+                (* 12.92 r)
+              (- (* 1.055 (expt r (/ 1 2.4))) 0.055))
+            (if (<= g 0.0031308)
+                (* 12.92 g)
+              (- (* 1.055 (expt g (/ 1 2.4))) 0.055))
+            (if (<= b 0.0031308)
+                (* 12.92 b)
+              (- (* 1.055 (expt b (/ 1 2.4))) 0.055)))))
 
-(defun labburn-rgb-to-hex  (red green blue)
-  "Return hexadecimal notation for the color RED GREEN BLUE.
+  (defun labburn-rgb-to-hex  (red green blue)
+    "Return hexadecimal notation for the color RED GREEN BLUE.
 RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
-  (format "#%02x%02x%02x"
-          (* red 255) (* green 255) (* blue 255)))
+    (format "#%02x%02x%02x"
+            (* red 255) (* green 255) (* blue 255)))
 
-(defun labburn-lab-to-hex (L a b)
-  (apply 'labburn-rgb-to-hex (apply 'labburn-xyz-to-srgb (labburn-lab-to-xyz L a b))))
+  (defun labburn-lab-to-hex (L a b)
+    (apply 'labburn-rgb-to-hex (apply 'labburn-xyz-to-srgb (labburn-lab-to-xyz L a b))))
 
-(defun labburn-define-color (name a b &optional lightness step)
-  (setq lightness (or lightness labburn-base-lightness))
-  (setq step (or labburn-base-lightness-step step))
-  (dotimes (i 21)
-    (let* ((i (* (- i 10) 0.5))
-           (suffix (replace-regexp-in-string "0$" ""
-                                             (replace-regexp-in-string "\\." "" (cond
-                                                                                 ((< i 0) (number-to-string i))
-                                                                                 ((> i 0) (concat "+" (number-to-string i)))
-                                                                                 (t "")))))
-           (name (concat name suffix))
-           (l (labburn-clamp (+ lightness (* i step)) 0 100)))
-      (eval `(defconst ,(intern name) (labburn-lab-to-hex ,l ,a ,b))))))
+  (defun labburn-define-color (name a b &optional lightness step)
+    (setq lightness (or lightness labburn-base-lightness))
+    (setq step (or labburn-base-lightness-step step))
+    (dotimes (i 21)
+      (let* ((i (* (- i 10) 0.5))
+             (suffix (replace-regexp-in-string "0$" ""
+                                               (replace-regexp-in-string "\\." "" (cond
+                                                                                   ((< i 0) (number-to-string i))
+                                                                                   ((> i 0) (concat "+" (number-to-string i)))
+                                                                                   (t "")))))
+             (name (concat name suffix))
+             (l (labburn-clamp (+ lightness (* i step)) 0 100)))
+        (eval `(defconst ,(intern name) (labburn-lab-to-hex ,l ,a ,b))))))
 
-(labburn-define-color "labburn-red" 21.49605264873783 8.540773333869666 67)
-(labburn-define-color "labburn-orange" 13.168745714886187 23.101973510068618 75)
-(labburn-define-color "labburn-yellow" -1.3751424406895363 25.127342438569976 80)
-(labburn-define-color "labburn-green" -17.534332143205823 13.126938831390866 62 5)
-(labburn-define-color "labburn-blue" -20.560356403992287 -8.311105653507678 80)
-(labburn-define-color "labburn-magenta" 38.335076954957806 -15.842566128814228 67)
-(labburn-define-color "labburn-cyan" -22.87217931855784 -8.997815401280684 84)
-(labburn-define-color "labburn-bg" 0 0 27 5)
-(labburn-define-color "labburn-fg" -2.7768240550932743 7.856188033624156 87)
+  (labburn-define-color "labburn-red" 21.49605264873783 8.540773333869666 67)
+  (labburn-define-color "labburn-orange" 13.168745714886187 23.101973510068618 75)
+  (labburn-define-color "labburn-yellow" -1.3751424406895363 25.127342438569976 80)
+  (labburn-define-color "labburn-green" -17.534332143205823 13.126938831390866 62 5)
+  (labburn-define-color "labburn-blue" -20.560356403992287 -8.311105653507678 80)
+  (labburn-define-color "labburn-magenta" 38.335076954957806 -15.842566128814228 67)
+  (labburn-define-color "labburn-cyan" -22.87217931855784 -8.997815401280684 84)
+  (labburn-define-color "labburn-bg" 0 0 27 5)
+  (labburn-define-color "labburn-fg" -2.7768240550932743 7.856188033624156 87)
 
-(defvar labburn-highlight "yellow")
+  (defvar labburn-highlight "yellow"))
 
 ;;; Theme Faces
 (custom-theme-set-faces
