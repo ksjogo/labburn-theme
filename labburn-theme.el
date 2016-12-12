@@ -656,7 +656,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
 ;;;;; mu4e
  `(mu4e-header-key-face ((t (:foreground ,labburn-yellow))))
  `(mu4e-header-value-face ((t (:foreground ,labburn-orange))))
- ;;;;; neotree
+;;;;; neotree
  `(neo-banner-face ((t (:foreground ,labburn-blue+1 :weight bold))))
  `(neo-header-face ((t (:foreground ,labburn-fg))))
  `(neo-root-dir-face ((t (:foreground ,labburn-blue+1 :weight bold))))
