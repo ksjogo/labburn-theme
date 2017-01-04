@@ -185,21 +185,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(match ((t (:background ,labburn-bg-1 :foreground ,labburn-orange))))
 ;;;;; info
  `(Info-quoted ((t (:inherit font-lock-constant-face))))
-;;;;; irfc
- `(irfc-head-name-face ((t (:foreground ,labburn-red))))
- `(irfc-head-number-face ((t (:foreground ,labburn-red))))
- `(irfc-reference-face ((t (:foreground ,labburn-blue-1))))
- `(irfc-requirement-keyword-face ((t (:inherit font-lock-keyword-face))))
- `(irfc-rfc-link-face ((t (:inherit link))))
- `(irfc-rfc-number-face ((t (:foreground ,labburn-cyan))))
- `(irfc-std-number-face ((t (:foreground ,labburn-green+4))))
- `(irfc-table-item-face ((t (:foreground ,labburn-green+3))))
- `(irfc-title-face ((t (:foreground ,labburn-yellow :underline t))))
 ;;;;; isearch
  `(isearch ((t (:foreground ,labburn-highlight))))
  `(isearch-fail ((t (:foreground ,labburn-fg :background ,labburn-red-4))))
  `(lazy-highlight ((t (:foreground ,labburn-yellow-2 :background ,labburn-bg-05))))
-
  `(menu ((t (:foreground ,labburn-fg :background ,labburn-bg))))
  `(minibuffer-prompt ((t (:foreground ,labburn-yellow))))
  `(mode-line
@@ -549,6 +538,16 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(hydra-face-teal ((t (:foreground ,labburn-cyan :background ,labburn-bg))))
 ;;;;; iedit-mode
  `(iedit-occurrence ((t (:background ,labburn-bg+2))))
+ ;;;;; irfc
+ `(irfc-head-name-face ((t (:foreground ,labburn-red))))
+ `(irfc-head-number-face ((t (:foreground ,labburn-red))))
+ `(irfc-reference-face ((t (:foreground ,labburn-blue-1))))
+ `(irfc-requirement-keyword-face ((t (:inherit font-lock-keyword-face))))
+ `(irfc-rfc-link-face ((t (:inherit link))))
+ `(irfc-rfc-number-face ((t (:foreground ,labburn-cyan))))
+ `(irfc-std-number-face ((t (:foreground ,labburn-green+4))))
+ `(irfc-table-item-face ((t (:foreground ,labburn-green+3))))
+ `(irfc-title-face ((t (:foreground ,labburn-yellow :underline t))))
 ;;;;; ivy
  `(ivy-confirm-face ((t (:foreground ,labburn-green :background ,labburn-bg))))
  `(ivy-match-required-face ((t (:foreground ,labburn-red :background ,labburn-bg))))
