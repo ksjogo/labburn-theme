@@ -779,6 +779,11 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(rainbow-delimiters-depth-11-face ((t (:foreground ,labburn-green))))
  `(rainbow-delimiters-depth-12-face ((t (:foreground ,labburn-blue-5))))
  `(rainbow-delimiters-unmatched-face ((t (:foreground "red"))))
+;;;;; re-builder
+ `(reb-match-0 ((t (:foreground ,labburn-bg :background ,labburn-magenta))))
+ `(reb-match-1 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
+ `(reb-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
+ `(reb-match-3 ((t (:foreground ,labburn-bg :background ,labburn-red))))
 ;;;;; rtags
  `(rtags-errline ((t (:underline (:color "red" :style wave)))))
  `(rtags-fixitline ((t (:underline (:color "#93E0E3" :style wave)))))
@@ -846,7 +851,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(undo-tree-visualizer-default-face ((t (:foreground ,labburn-fg))))
  `(undo-tree-visualizer-register-face ((t (:foreground ,labburn-yellow))))
  `(undo-tree-visualizer-unmodified-face ((t (:foreground ,labburn-cyan))))
- ;;;;; visual-regexp
+;;;;; visual-regexp
  `(vr/group-0 ((t (:foreground ,labburn-bg :background ,labburn-green))))
  `(vr/group-1 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
  `(vr/group-2 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
