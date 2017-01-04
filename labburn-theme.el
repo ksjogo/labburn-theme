@@ -229,6 +229,15 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(aw-background-face
    ((t (:foreground ,labburn-fg-1 :background ,labburn-bg :inverse-video nil))))
  `(aw-leading-char-face ((t (:inherit aw-mode-line-face))))
+;;;;; auto-complete
+ `(ac-candidate-face ((t (:background ,labburn-bg+3 :foreground ,labburn-bg-2))))
+ `(ac-selection-face ((t (:background ,labburn-blue-4 :foreground ,labburn-fg))))
+ `(popup-tip-face ((t (:background ,labburn-yellow-2 :foreground ,labburn-bg-2))))
+ `(popup-menu-mouse-face ((t (:background ,labburn-yellow-2 :foreground ,labburn-bg-2))))
+ `(popup-summary-face ((t (:background ,labburn-bg+3 :foreground ,labburn-bg-2))))
+ `(popup-scroll-bar-foreground-face ((t (:background ,labburn-blue-5))))
+ `(popup-scroll-bar-background-face ((t (:background ,labburn-bg-1))))
+ `(popup-isearch-match ((t (:background ,labburn-bg :foreground ,labburn-fg))))
 ;;;;; avy
  `(avy-background-face
    ((t (:foreground ,labburn-fg-3 :background ,labburn-bg :inverse-video nil))))
