@@ -560,7 +560,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(js2-function-call ((t (:foreground ,labburn-cyan))))
  `(js2-private-member ((t (:foreground ,labburn-blue-1))))
  `(js2-keywords ((t (:foreground ,labburn-magenta))))
- ;;;;; ledger-mode
+;;;;; ledger-mode
  `(ledger-font-payee-uncleared-face ((t (:foreground ,labburn-red-1))))
  `(ledger-font-payee-cleared-face ((t (:foreground ,labburn-fg))))
  `(ledger-font-payee-pending-face ((t (:foreground ,labburn-red))))
@@ -846,6 +846,13 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(undo-tree-visualizer-default-face ((t (:foreground ,labburn-fg))))
  `(undo-tree-visualizer-register-face ((t (:foreground ,labburn-yellow))))
  `(undo-tree-visualizer-unmodified-face ((t (:foreground ,labburn-cyan))))
+ ;;;;; visual-regexp
+ `(vr/group-0 ((t (:foreground ,labburn-bg :background ,labburn-green))))
+ `(vr/group-1 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
+ `(vr/group-2 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
+ `(vr/match-0 ((t (:inherit isearch))))
+ `(vr/match-1 ((t (:foreground ,labburn-yellow-2 :background ,labburn-bg-1))))
+ `(vr/match-separator-face ((t (:foreground ,labburn-red))))
 ;;;;; volatile-highlights
  `(vhl/default-face ((t (:inherit highlight))))
 ;;;;; web-mode
