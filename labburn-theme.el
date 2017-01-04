@@ -824,6 +824,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(reb-match-1 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
  `(reb-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
  `(reb-match-3 ((t (:foreground ,labburn-bg :background ,labburn-red))))
+ ;;;;; regex-tool
+ `(regex-tool-matched-face ((t (:background ,labburn-blue-4))))
 ;;;;; rtags
  `(rtags-errline ((t (:underline (:color "red" :style wave)))))
  `(rtags-fixitline ((t (:underline (:color "#93E0E3" :style wave)))))
