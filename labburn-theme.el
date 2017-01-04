@@ -432,6 +432,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(erc-prompt-face ((t (:foreground ,labburn-orange :background ,labburn-bg))))
  `(erc-timestamp-face ((t (:foreground ,labburn-green+4))))
  `(erc-underline-face ((t (:underline t))))
+;;;;; eros
+ `(eros-result-overlay-face ((t (:background unspecified))))
 ;;;;; eshell
  `(eshell-prompt ((t (:foreground ,labburn-yellow))))
  `(eshell-ls-archive ((t (:foreground ,labburn-red-1))))
@@ -538,7 +540,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(hydra-face-teal ((t (:foreground ,labburn-cyan :background ,labburn-bg))))
 ;;;;; iedit-mode
  `(iedit-occurrence ((t (:background ,labburn-bg+2))))
- ;;;;; irfc
+;;;;; irfc
  `(irfc-head-name-face ((t (:foreground ,labburn-red))))
  `(irfc-head-number-face ((t (:foreground ,labburn-red))))
  `(irfc-reference-face ((t (:foreground ,labburn-blue-1))))
