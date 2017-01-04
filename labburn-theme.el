@@ -712,6 +712,17 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(message-header-xheader ((t (:foreground ,labburn-green))))
  `(message-mml ((t (:foreground ,labburn-yellow))))
  `(message-separator ((t (:inherit font-lock-comment-face))))
+;;;;; mingus
+ `(mingus-directory-face ((t (:foreground ,labburn-blue))))
+ `(mingus-pausing-face ((t (:foreground ,labburn-magenta))))
+ `(mingus-playing-face ((t (:foreground ,labburn-cyan))))
+ `(mingus-playlist-face ((t (:foreground ,labburn-cyan ))))
+ `(mingus-mark-face ((t (:bold t :foreground ,labburn-magenta))))
+ `(mingus-song-file-face ((t (:foreground ,labburn-yellow))))
+ `(mingus-artist-face ((t (:foreground ,labburn-cyan))))
+ `(mingus-album-face ((t (:underline t :foreground ,labburn-red+1))))
+ `(mingus-album-stale-face ((t (:foreground ,labburn-red+1))))
+ `(mingus-stopped-face ((t (:foreground ,labburn-red))))
 ;;;;; mini-header-line
  `(mini-header-line-active ((t (:background ,labburn-bg-2))))
 ;;;;; mu4e
