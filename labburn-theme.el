@@ -554,6 +554,22 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(hydra-face-blue ((t (:foreground ,labburn-blue :background ,labburn-bg))))
  `(hydra-face-pink ((t (:foreground ,labburn-magenta :background ,labburn-bg))))
  `(hydra-face-teal ((t (:foreground ,labburn-cyan :background ,labburn-bg))))
+ ;;;;; info+
+    `(info-command-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-orange))))
+    `(info-constant-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-magenta))))
+    `(info-double-quoted-name ((t (:inherit font-lock-comment-face))))
+    `(info-file ((t (:background ,labburn-bg-1 :foreground ,labburn-yellow))))
+    `(info-function-ref-item ((t (:background ,labburn-bg-1 :inherit font-lock-function-name-face))))
+    `(info-macro-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-yellow))))
+    `(info-menu ((t (:foreground ,labburn-yellow))))
+    `(info-quoted-name ((t (:inherit font-lock-constant-face))))
+    `(info-reference-item ((t (:background ,labburn-bg-1))))
+    `(info-single-quote ((t (:inherit font-lock-keyword-face))))
+    `(info-special-form-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-yellow))))
+    `(info-string ((t (:inherit font-lock-string-face))))
+    `(info-syntax-class-item ((t (:background ,labburn-bg-1 :foreground ,labburn-blue+1))))
+    `(info-user-option-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-red))))
+    `(info-variable-ref-item ((t (:background ,labburn-bg-1 :foreground ,labburn-orange))))
 ;;;;; iedit-mode
  `(iedit-occurrence ((t (:background ,labburn-bg+2))))
 ;;;;; irfc
