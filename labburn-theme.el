@@ -314,6 +314,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(cider-test-failure-face ((t (:background ,labburn-red-4))))
  `(cider-test-error-face ((t (:background ,labburn-magenta))))
  `(cider-test-success-face ((t (:background ,labburn-green-1))))
+`(cider-fringe-good-face ((t (:foreground ,labburn-green+4))))
 ;;;;; company-mode
  `(company-tooltip ((t (:foreground ,labburn-fg :background ,labburn-bg+1 :weight normal))))
  `(company-tooltip-selection ((t (:background ,labburn-bg+2 :weight normal))))
