@@ -219,6 +219,12 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(font-lock-variable-name-face ((t (:foreground ,labburn-orange))))
  `(font-lock-warning-face ((t (:foreground ,labburn-yellow-2))))
  `(c-annotation-face ((t (:inherit font-lock-constant-face))))
+;;;;; man
+    '(Man-overstrike ((t (:inherit font-lock-keyword-face))))
+    '(Man-underline  ((t (:inherit (font-lock-string-face underline)))))
+;;;;; woman
+    '(woman-bold   ((t (:inherit font-lock-keyword-face))))
+    '(woman-italic ((t (:inherit (font-lock-string-face italic)))))
 ;;;; Third-party
 ;;;;; ace-jump
  `(ace-jump-face-background
