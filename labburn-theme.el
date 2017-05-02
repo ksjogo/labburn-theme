@@ -339,6 +339,13 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(ctbl:face-cell-select ((t (:background ,labburn-blue :foreground ,labburn-bg))))
  `(ctbl:face-continue-bar ((t (:background ,labburn-bg-05 :foreground ,labburn-bg))))
  `(ctbl:face-row-select ((t (:background ,labburn-cyan :foreground ,labburn-bg))))
+;;;;; debbugs
+ `(debbugs-gnu-done ((t (:foreground ,labburn-fg-1))))
+ `(debbugs-gnu-handled ((t (:foreground ,labburn-green))))
+ `(debbugs-gnu-new ((t (:foreground ,labburn-red))))
+ `(debbugs-gnu-pending ((t (:foreground ,labburn-blue))))
+ `(debbugs-gnu-stale ((t (:foreground ,labburn-orange))))
+ `(debbugs-gnu-tagged ((t (:foreground ,labburn-red))))
 ;;;;; diff
  `(diff-added          ((t (:background "#335533" :foreground ,labburn-green))))
  `(diff-changed        ((t (:background "#555511" :foreground ,labburn-yellow-1))))
@@ -824,7 +831,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(reb-match-1 ((t (:foreground ,labburn-bg :background ,labburn-blue))))
  `(reb-match-2 ((t (:foreground ,labburn-bg :background ,labburn-orange))))
  `(reb-match-3 ((t (:foreground ,labburn-bg :background ,labburn-red))))
- ;;;;; regex-tool
+;;;;; regex-tool
  `(regex-tool-matched-face ((t (:background ,labburn-blue-4))))
 ;;;;; rtags
  `(rtags-errline ((t (:underline (:color "red" :style wave)))))
