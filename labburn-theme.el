@@ -402,6 +402,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(diff-hl-delete ((,labburn-class (:foreground ,labburn-red+1 :background ,labburn-red-1))))
  `(diff-hl-insert ((,labburn-class (:foreground ,labburn-green+1 :background ,labburn-green-2))))
 ;;;;; dired
+ `(dired-header ((t (:foreground ,labburn-orange))))
  `(dired-directory ((t (:foreground ,labburn-orange))))
  `(dired-marked ((t (:foreground ,labburn-highlight))))
  `(dired-mark ((t (:foreground ,labburn-highlight))))
