@@ -800,28 +800,24 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(ruler-mode-default ((t (:foreground ,labburn-green+2 :background ,labburn-bg))))
 ;;;;; magit
 ;;;;;; headings and diffs
- `(magit-section-highlight           ((t (:background ,labburn-bg+05))))
- `(magit-section-heading             ((t (:foreground ,labburn-yellow))))
- `(magit-section-heading-selection   ((t (:foreground ,labburn-orange))))
- `(magit-diff-added                  ((t (:background ,labburn-green-2))))
- `(magit-diff-added-highlight        ((t (:background ,labburn-green))))
- `(magit-diff-removed                ((t (:background ,labburn-red-4))))
- `(magit-diff-removed-highlight      ((t (:background ,labburn-red-3))))
- `(magit-diff-file-heading           ((t (:weight bold))))
- `(magit-diff-file-heading-highlight ((t (:background ,labburn-bg+05 ))))
- `(magit-diff-file-heading-selection ((t (:background ,labburn-bg+05
-                                                      :foreground ,labburn-orange))))
- `(magit-diff-hunk-heading           ((t (:background ,labburn-bg+1))))
- `(magit-diff-hunk-heading-highlight ((t (:background ,labburn-bg+2))))
- `(magit-diff-hunk-heading-selection ((t (:background ,labburn-bg+2
-                                                      :foreground ,labburn-orange))))
- `(magit-diff-lines-heading          ((t (:background ,labburn-orange
-                                                      :foreground ,labburn-bg+2))))
- `(magit-diff-context-highlight      ((t (:background ,labburn-bg+05
-                                                      :foreground "grey70"))))
- `(magit-diffstat-added   ((t (:foreground ,labburn-green+4))))
- `(magit-diffstat-removed ((t (:foreground ,labburn-red))))
-;;;;;; popup
+  `(magit-section-highlight ((t (:background ,labburn-bg+05))))
+   `(magit-section-heading ((t (:foreground ,labburn-yellow))))
+   `(magit-section-heading-selection ((t (:foreground ,labburn-orange))))
+   `(magit-diff-file-heading ((t (:weight bold))))
+   `(magit-diff-file-heading-highlight ((t (:background ,labburn-bg+05))))
+   `(magit-diff-file-heading-selection ((t (:background ,labburn-bg+05 :foreground ,labburn-orange))))
+   `(magit-diff-added ((t (:background ,labburn-green-2))))
+   `(magit-diff-added-highlight ((t (:background ,labburn-green))))
+   `(magit-diff-removed ((t (:background ,labburn-red-4))))
+   `(magit-diff-removed-highlight ((t (:background ,labburn-red-3))))
+   `(magit-diff-hunk-heading ((t (:background ,labburn-bg+1))))
+   `(magit-diff-hunk-heading-highlight ((t (:background ,labburn-bg+2))))
+   `(magit-diff-hunk-heading-selection ((t (:background ,labburn-bg+2 :foreground ,labburn-orange))))
+   `(magit-diff-lines-heading ((t (:background ,labburn-orange :foreground ,labburn-bg+2))))
+   `(magit-diff-context-highlight ((t (:background ,labburn-bg+05 :foreground "grey70"))))
+   `(magit-diffstat-added ((t (:foreground ,labburn-green+4))))
+   `(magit-diffstat-removed ((t (:foreground ,labburn-red))))
+ ;;;;;; popup
  `(magit-popup-heading             ((t (:foreground ,labburn-yellow ))))
  `(magit-popup-key                 ((t (:foreground ,labburn-green-2))))
  `(magit-popup-argument            ((t (:foreground ,labburn-green  ))))
