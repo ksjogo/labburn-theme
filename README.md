@@ -9,6 +9,6 @@ developed by [Jani Nurminen](https://github.com/jnurmine).
 The main change is the movement of color defintions to the [Lab Color Space](https://en.wikipedia.org/wiki/Lab_color_space),
 which allows better manipulation and comparative equality in perception of the lightness of different colors. Colors were converted from the zenburn theme and slightly adjusted in lightness.
 
-All/most bold attributes were removed as well, as these change the lightness perception. Development of the original zenburn theme is tracked as far as appropiate, last _merged_ commit was _eaaba83ce08e8afff5f4c8dd6be0921ef34f9cef_.
+All/most bold attributes were removed as well, as these change the lightness perception. Development of the original zenburn theme is tracked as far as appropiate, last _merged_ commit was _6ca85d248468639650fcce2c2d13c46c6e99ded3_.
 The theme is made to be used with the rainbow-identifiers package, please enable this.
 [License GPL 3](http://www.gnu.org/licenses/gpl-3.0.txt)

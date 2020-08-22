@@ -147,7 +147,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(cursor ((t (:foreground ,labburn-fg :background ,labburn-fg+1))))
  `(widget-field ((t (:foreground ,labburn-fg :background ,labburn-bg+3))))
  `(escape-glyph ((t (:foreground ,labburn-yellow :weight bold))))
- `(fringe ((t (:foreground ,labburn-bg :background ,labburn-bg))))
+ `(fringe ((t (:foreground ,labburn-bg+3 :background ,labburn-bg))))
  `(header-line ((t (:foreground ,labburn-yellow :background ,labburn-bg :extend t))))
  `(highlight ((t (:background ,labburn-bg+1))))
  `(success ((t (:foreground ,labburn-green))))
@@ -692,6 +692,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(helm-lxc-face-frozen ((t (:foreground ,labburn-blue :background ,labburn-bg))))
  `(helm-lxc-face-running ((t (:foreground ,labburn-green :background ,labburn-bg))))
  `(helm-lxc-face-stopped ((t (:foreground ,labburn-red :background ,labburn-bg))))
+;;;;; highlight-symbol
+ `(highlight-symbol-face ((t (:background ,labburn-bg+2))))
+;;;;; highlight-thing
+ `(highlight-thing ((t (:background ,labburn-bg+2))))
  ;;;;; hl-line-mode
  `(hl-line-face ((,labburn-class (:background ,labburn-bg-05))
                  (t :weight bold)))
@@ -1022,6 +1026,8 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(parenthesis ((t (:foreground ,labburn-fg-1))))
 ;;;;; pdf-tools
  `(pdf-view-midnight-colors '(,labburn-fg . ,labburn-bg-05))
+ ;;;;; perspective
+ `(persp-selected-face ((t (:foreground ,labburn-yellow-2))))
 ;;;;; rainbow-delimiters
  `(rainbow-delimiters-depth-1-face ((t (:foreground ,labburn-fg))))
  `(rainbow-delimiters-depth-2-face ((t (:foreground ,labburn-green+4))))
@@ -1080,6 +1086,10 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(solaire-minibuffer-face ((t (:inherit default :background ,labburn-bg-05))))
  `(solaire-hl-line-face ((t (:inherit hl-line :background ,labburn-bg))))
  `(solaire-org-hide-face ((t (:inherit org-hide :background ,labburn-bg-05))))
+;;;;; selectrum
+ `(selectrum-current-candidate ((t (:foreground ,labburn-yellow :weight bold :underline t))))
+ `(selectrum-primary-highlight ((t (:background ,labburn-green-2))))
+ `(selectrum-secondary-highlight ((t (:background ,labburn-green))))
 ;;;;; SLIME
  `(slime-repl-output-face ((t (:foreground ,labburn-red))))
  `(slime-repl-inputed-output-face ((t (:foreground ,labburn-green))))
