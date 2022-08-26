@@ -670,6 +670,7 @@ RED, GREEN, and BLUE should be numbers between 0.0 and 1.0, inclusive."
  `(helm-buffer-size ((t (:foreground ,labburn-fg-1 :background ,labburn-bg))))
  `(helm-ff-directory ((t (:foreground ,labburn-orange :background ,labburn-bg))))
  `(helm-ff-file ((t (:foreground ,labburn-fg :background ,labburn-bg :weight normal))))
+ `(helm-ff-file-extension ((t (:foreground ,labburn-fg :background ,labburn-bg :weight normal))))
  `(helm-ff-executable ((t (:foreground ,labburn-green+2 :background ,labburn-bg :weight normal))))
  `(helm-ff-invalid-symlink ((t (:foreground ,labburn-red :background ,labburn-bg))))
  `(helm-ff-symlink ((t (:foreground ,labburn-yellow :background ,labburn-bg))))
